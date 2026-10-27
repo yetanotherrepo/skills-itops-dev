@@ -1,10 +1,10 @@
 # Progress
 
 ## Project and objective
-Build and deploy skills.itops.dev as an automatic mirror of the owner's public GitHub skills, with the visual identity of itops.dev. Phase: verification and deployment.
+Build and deploy skills.itops.dev as an automatic mirror of the owner's public GitHub skills, with the visual identity of itops.dev. Phase: delivered.
 
 ## Current status
-2026-10-27, Europe/Lisbon. Live at [skills.itops.dev](https://skills.itops.dev): 15 skills from public sources, including forks. The scanner checks 13 public repositories (including this site's new repository). Nine tests pass. Automatic propagation of a real GitHub commit was verified through the systemd timer. Source publication and design documentation are being finalized.
+2026-10-27, Europe/Lisbon. Live at [skills.itops.dev](https://skills.itops.dev): 15 skills from public sources, including forks. The scanner checks 13 public repositories (including this site's new repository). Nine tests pass. Automatic propagation of a real GitHub commit was verified through the systemd timer. Site source is public at [yetanotherrepo/skills-itops-dev](https://github.com/yetanotherrepo/skills-itops-dev); design documentation is complete.
 
 ## Completed
 - Confirmed the GitHub owner: `yetanotherrepo`; `future-letter` is publicly available.
@@ -13,14 +13,15 @@ Build and deploy skills.itops.dev as an automatic mirror of the owner's public G
 - Impeccable context ran once for this project; no existing product/design files were present.
 - Implemented anonymous GitHub discovery, full pagination/tree traversal, immutable blob validation, bounded bundles and static search/detail/download pages.
 - Deployed isolated Node 22.23.4, unprivileged synchronization service, five-minute timer and dedicated NGINX HTTPS virtual host.
+- Published reviewed site source, DESIGN.md and .impeccable/design.json; anonymous README access and ten deployed source/config hashes matched the local repository.
 - Saved the user's future-publication workflow in local agent instructions: GitHub source plus verified mirror, including public forks, with no implicit private-skill publication.
 
 ## In progress
-- Current chat: final design documentation and publication of the site's source repository.
+- No active implementation task remains.
 
 ## Next steps
-1. Finish the design token handoff and publish the reviewed source.
-2. Reconcile final project records and confirm the public source revision.
+- Publish future approved skills to GitHub; verify their mirror after the scheduled check.
+- Investigate only actionable service warnings or requested product changes.
 
 ## Blocked and open questions
 - No blocker or unresolved product scope question.
@@ -52,3 +53,5 @@ Build and deploy skills.itops.dev as an automatic mirror of the owner's public G
 - 2026-10-27: user confirmed inclusion of forks; live discovery now finds 15 skills across 12 repositories. Fixed five issues from independent security review; staging cleanup now recovers interrupted builds.
 
 - 2026-10-27: HTTPS deployment and automatic timer propagation verified; both independent reviews completed, no open material fixes.
+
+- 2026-10-27: source repository published publicly (initial commit `cced753`); design documenter completed and validated tokens. Final future-letter commit `f92bc08` was also confirmed on the mirror after its progress-record update.

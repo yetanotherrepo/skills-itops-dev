@@ -4,7 +4,7 @@
 Public GitHub skill mirror at skills.itops.dev. Last updated: 2026-10-27, Europe/Lisbon. Implemented and deployed; automatic source propagation verified.
 
 ## Current architecture
-Existing itops.dev is a static HTML page behind NGINX on the owner's VPS. The mirror has a separate project and has its own virtual host and content directory. `future-letter` is the initial owned source; public forks also contribute skills.
+Existing itops.dev is a static HTML page behind NGINX on the owner's VPS. The mirror has a separate project, virtual host and content directory. `future-letter` is the initial owned source; public forks also contribute skills.
 
 - `src/catalog.mjs`: anonymous repository discovery, validated metadata and immutable source bytes.
 - `src/render.mjs`, `web/`: escaped HTML, existing terminal visual identity and local search/copy interactions.
@@ -30,3 +30,5 @@ Existing DNS already routes skills.itops.dev to the VPS. A dedicated TLS certifi
 User confirmed including public forks. Node 22 generates static files; systemd runs every five minutes with kernel flock, an unprivileged service account, persistent backoff and atomic symlink activation. NGINX serves a separate vhost with inert original-source MIME types. Native configuration validation, public HTTPS checks and a real timer-driven update passed. Detailed task state is in [PROGRESS.MD](PROGRESS.MD).
 
 Source visibility changes are applied after a successful public listing; GitHub outages and retry windows can delay removal. Resource limits intentionally bound a single scan; large or invalid sources produce visible partial-update status and journal warnings. No additional architecture change is required by the current request.
+
+The implemented visual contract is recorded in [DESIGN.md](DESIGN.md) and `.impeccable/design.json`; the user-pinned homepage identity remains authoritative for future extensions. Source and runtime files were verified against the public repository on 2026-10-27.
