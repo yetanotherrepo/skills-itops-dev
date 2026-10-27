@@ -1,0 +1,11 @@
+[Unit]
+Description=Check GitHub for public skill changes every five minutes
+
+[Timer]
+OnCalendar=*:0/5
+RandomizedDelaySec=15
+Persistent=true
+Unit=skills-mirror.service
+
+[Install]
+WantedBy=timers.target

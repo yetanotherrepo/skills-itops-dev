@@ -1,0 +1,29 @@
+[Unit]
+Description=Refresh the public GitHub skill mirror
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=skills-mirror
+Group=skills-mirror
+WorkingDirectory=/opt/skills-mirror/app
+Environment=STATE_DIR=/var/lib/skills-mirror
+Environment=PUBLISH_DIR=/var/www/skills.itops.dev
+ExecStart=/usr/bin/flock --nonblock /var/lib/skills-mirror/sync.lock /opt/skills-mirror/runtime/bin/node /opt/skills-mirror/app/src/sync.mjs
+SuccessExitStatus=2
+TimeoutStartSec=8min
+UMask=0022
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/skills-mirror /var/www/skills.itops.dev
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+MemoryMax=768M

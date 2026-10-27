@@ -1,0 +1,23 @@
+{
+  "owner": "yetanotherrepo",
+  "siteUrl": "https://skills.itops.dev",
+  "includeForks": true,
+  "refreshMinutes": 5,
+  "maxFileBytes": 1048576,
+  "maxBundleBytes": 8388608,
+  "maxBundleFiles": 250,
+  "maxSkills": 300,
+  "maxCatalogBytes": 67108864,
+  "ignoredDirectories": [
+    ".git",
+    "node_modules",
+    "vendor",
+    "dist",
+    "build",
+    ".cache",
+    ".venv",
+    "venv",
+    "work",
+    "outputs"
+  ]
+}

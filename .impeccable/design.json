@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T13:17:54.257072+00:00",
+  "title": "Design System: skills.itops.dev",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Terminal Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.27758 144.47)",
+          "oklch(26.43% 0.27758 144.47)",
+          "oklch(37.86% 0.27758 144.47)",
+          "oklch(49.29% 0.27758 144.47)",
+          "oklch(60.71% 0.27758 144.47)",
+          "oklch(72.14% 0.27758 144.47)",
+          "oklch(83.57% 0.27758 144.47)",
+          "oklch(95.00% 0.27758 144.47)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Black Canvas",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Reading Panel",
+        "tonalRamp": [
+          "oklch(15.00% 0.02045 151.30)",
+          "oklch(26.43% 0.02045 151.30)",
+          "oklch(37.86% 0.02045 151.30)",
+          "oklch(49.29% 0.02045 151.30)",
+          "oklch(60.71% 0.02045 151.30)",
+          "oklch(72.14% 0.02045 151.30)",
+          "oklch(83.57% 0.02045 151.30)",
+          "oklch(95.00% 0.02045 151.30)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Reading Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.02688 152.34)",
+          "oklch(26.43% 0.02688 152.34)",
+          "oklch(37.86% 0.02688 152.34)",
+          "oklch(49.29% 0.02688 152.34)",
+          "oklch(60.71% 0.02688 152.34)",
+          "oklch(72.14% 0.02688 152.34)",
+          "oklch(83.57% 0.02688 152.34)",
+          "oklch(95.00% 0.02688 152.34)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.04796 153.86)",
+          "oklch(26.43% 0.04796 153.86)",
+          "oklch(37.86% 0.04796 153.86)",
+          "oklch(49.29% 0.04796 153.86)",
+          "oklch(60.71% 0.04796 153.86)",
+          "oklch(72.14% 0.04796 153.86)",
+          "oklch(83.57% 0.04796 153.86)",
+          "oklch(95.00% 0.04796 153.86)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divider Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.05872 151.19)",
+          "oklch(26.43% 0.05872 151.19)",
+          "oklch(37.86% 0.05872 151.19)",
+          "oklch(49.29% 0.05872 151.19)",
+          "oklch(60.71% 0.05872 151.19)",
+          "oklch(72.14% 0.05872 151.19)",
+          "oklch(83.57% 0.05872 151.19)",
+          "oklch(95.00% 0.05872 151.19)"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "Interaction Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.04176 150.94)",
+          "oklch(26.43% 0.04176 150.94)",
+          "oklch(37.86% 0.04176 150.94)",
+          "oklch(49.29% 0.04176 150.94)",
+          "oklch(60.71% 0.04176 150.94)",
+          "oklch(72.14% 0.04176 150.94)",
+          "oklch(83.57% 0.04176 150.94)",
+          "oklch(95.00% 0.04176 150.94)"
+        ]
+      },
+      "on-primary": {
+        "role": "primary",
+        "displayName": "Deep Action Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.04823 151.93)",
+          "oklch(26.43% 0.04823 151.93)",
+          "oklch(37.86% 0.04823 151.93)",
+          "oklch(49.29% 0.04823 151.93)",
+          "oklch(60.71% 0.04823 151.93)",
+          "oklch(72.14% 0.04823 151.93)",
+          "oklch(83.57% 0.04823 151.93)",
+          "oklch(95.00% 0.04823 151.93)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Light Terminal Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.12074 151.57)",
+          "oklch(26.43% 0.12074 151.57)",
+          "oklch(37.86% 0.12074 151.57)",
+          "oklch(49.29% 0.12074 151.57)",
+          "oklch(60.71% 0.12074 151.57)",
+          "oklch(72.14% 0.12074 151.57)",
+          "oklch(83.57% 0.12074 151.57)",
+          "oklch(95.00% 0.12074 151.57)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Catalog hero."
+      },
+      "detail-display": {
+        "displayName": "Detail Display",
+        "purpose": "Skill detail hero."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major sections."
+      },
+      "catalog-title": {
+        "displayName": "Catalog Title",
+        "purpose": "Directory entry titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Local headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Page body."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Long source instructions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Action buttons."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Skill identifiers and source types."
+      }
+    },
+    "shadows": [
+      {
+        "name": "catalog-title-glow",
+        "value": "0 0 14px #00ff411c",
+        "purpose": "Text shadow on the catalog hero only; the implementation has no box shadows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "cursor-blink",
+        "value": "blink 1.25s steps(1,end) infinite",
+        "purpose": "Wordmark cursor; opacity is 1 at 0%, 70%, and 100%, and 0 at 71% and 99%. Disabled by prefers-reduced-motion."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "In-page anchors; reduced-motion uses auto."
+      },
+      {
+        "name": "copy-feedback-duration",
+        "value": "8000ms",
+        "purpose": "Success or failure feedback is removed after this delay, reset after each attempt."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "description": "Filled action for starting or copying.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Copy instruction</button>",
+      "css": ".ds-primary{font-family:var(--mono,\"Courier New\",Courier,monospace);display:inline-flex;justify-content:center;align-items:center;gap:.5rem;min-height:48px;border:1px solid var(--green,#00ff41);padding:12px 18px;border-radius:0;text-decoration:none;font-size:.9rem;font-weight:700;line-height:1.4;text-align:center;cursor:pointer;background:var(--green,#00ff41);color:#001807}.ds-primary:hover{background:#a9ffbf;color:#001807;border-color:#a9ffbf}.ds-primary:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}.ds-primary:disabled{opacity:.65;cursor:wait}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "Outlined download, reset, or alternate-copy action.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Download skill</button>",
+      "css": ".ds-secondary{font-family:var(--mono,\"Courier New\",Courier,monospace);display:inline-flex;justify-content:center;align-items:center;gap:.5rem;min-height:48px;border:1px solid var(--green,#00ff41);padding:12px 18px;border-radius:0;text-decoration:none;font-size:.9rem;font-weight:700;line-height:1.4;text-align:center;cursor:pointer;background:transparent;color:var(--green,#00ff41);border-color:var(--line,#274930)}.ds-secondary:hover{background:var(--hover,#0e2414);border-color:var(--green,#00ff41);color:var(--green,#00ff41)}.ds-secondary:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}.ds-secondary:disabled{opacity:.65;cursor:wait}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "description": "Single-line filter; the site supplies immediate filtering.",
+      "html": "<label class=\"ds-search-label\" for=\"ds-skill-search\">Find a skill</label><input class=\"ds-search\" id=\"ds-skill-search\" type=\"search\" placeholder=\"Name or task\">",
+      "css": ".ds-search-label{font-family:var(--mono,\"Courier New\",Courier,monospace);font-size:.85rem;color:var(--muted,#94b49d);margin-right:1rem}.ds-search{font-family:var(--mono,\"Courier New\",Courier,monospace);font-size:17px;width:275px;max-width:100%;border:1px solid var(--line,#274930);background:var(--bg,#000);color:var(--ink,#d3e5d7);padding:12px 15px;line-height:1.35;caret-color:var(--green,#00ff41);border-radius:0}.ds-search::placeholder{color:var(--muted,#94b49d);opacity:1}.ds-search:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}@media(max-width:680px){.ds-search{width:100%;font-size:1rem;min-height:48px}}",
+      "refersTo": "search-field"
+    },
+    {
+      "name": "Copy Field",
+      "kind": "input",
+      "description": "Read-only instructions remain selectable and vertically resizable.",
+      "html": "<textarea class=\"ds-copy-field\" aria-label=\"Instruction\" readonly rows=\"4\">The original skill instruction appears here.</textarea>",
+      "css": ".ds-copy-field{font-family:var(--mono,\"Courier New\",Courier,monospace);display:block;resize:vertical;width:100%;min-height:126px;padding:16px;background:var(--panel,#071009);border:1px solid var(--line,#274930);color:var(--ink,#d3e5d7);font-size:.85rem;line-height:1.6;border-radius:0;caret-color:var(--green,#00ff41);margin-block:20px 16px;overflow-wrap:anywhere}.ds-copy-field:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}@media(max-width:680px){.ds-copy-field{font-size:.8rem;padding:12px}}",
+      "refersTo": "copy-field"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Wordmark, domain, cursor, and plain text navigation.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"#\"><span class=\"ds-prompt\" aria-hidden=\"true\">&gt;</span>skills<span class=\"ds-domain\">.itops.dev</span><span class=\"ds-cursor\" aria-hidden=\"true\"></span></a><nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"#catalog\">Catalog</a><a href=\"#start\">How to use</a><a href=\"https://github.com/yetanotherrepo\">GitHub</a></nav></header>",
+      "css": ".ds-header{font-family:var(--mono,\"Courier New\",Courier,monospace);display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-block:34px;border-bottom:1px solid var(--line,#274930)}.ds-wordmark{display:inline-flex;align-items:center;white-space:nowrap;font-size:1.17rem;color:var(--green,#00ff41);text-decoration:none}.ds-domain{color:var(--muted,#94b49d)}.ds-prompt{margin-right:.65rem}.ds-cursor{height:1.05em;width:.54em;background:var(--green,#00ff41);display:inline-block;margin-left:.45rem;animation:ds-blink 1.25s steps(1,end) infinite}.ds-nav{display:flex;gap:2rem;align-items:center;font-size:.9rem}.ds-nav a{color:var(--ink,#d3e5d7);text-decoration:none;padding-block:8px}.ds-nav a:hover{color:var(--green,#00ff41);text-decoration:underline}.ds-header a:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}@keyframes ds-blink{0%,70%,100%{opacity:1}71%,99%{opacity:0}}@media(max-width:680px){.ds-header{align-items:flex-start;flex-direction:column;gap:16px;padding-block:24px 18px}.ds-wordmark{font-size:1.05rem}.ds-nav{font-size:.79rem;gap:1.4rem;justify-content:space-between;width:100%}.ds-nav a{padding-block:6px}}@media(prefers-reduced-motion:reduce){.ds-cursor{animation:none}}"
+    },
+    {
+      "name": "Catalog Count",
+      "kind": "chip",
+      "description": "A noninteractive count label beside the section heading.",
+      "html": "<span class=\"ds-count\" aria-label=\"Number of skills\">15</span>",
+      "css": ".ds-count{font-family:var(--mono,\"Courier New\",Courier,monospace);font-size:.9rem;letter-spacing:0;color:var(--muted,#94b49d);border:1px solid var(--line,#274930);padding:.2rem .55rem;line-height:1.2}",
+      "refersTo": "count"
+    },
+    {
+      "name": "Directory Row",
+      "kind": "custom",
+      "description": "Title and purpose lead; technical source metadata follows.",
+      "html": "<article class=\"ds-row\"><div><h3 class=\"ds-row-title\"><a href=\"#skill\">Skill title</a></h3><p class=\"ds-row-description\">A concise description of the task this skill helps complete.</p><div class=\"ds-row-meta\"><span>skill-name</span><span>SKILL.md</span></div></div><a class=\"ds-row-open\" href=\"#skill\">Open <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a></article>",
+      "css": ".ds-row{font-family:var(--mono,\"Courier New\",Courier,monospace);display:grid;grid-template-columns:1fr 125px;gap:2rem;padding:36px 0;border-bottom:1px solid var(--line,#274930);align-items:start;color:var(--ink,#d3e5d7)}.ds-row:hover{background:var(--panel,#071009)}.ds-row-title{font-size:1.7rem;font-weight:400;line-height:1.15;margin:0 0 .75rem;letter-spacing:-.025em}.ds-row-title a,.ds-row-open{color:var(--green,#00ff41);text-decoration:none}.ds-row a:hover{text-decoration:underline}.ds-row a:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}.ds-row-description{max-width:64ch;margin:0 0 1.1rem;font-size:1rem;line-height:1.6;overflow-wrap:anywhere}.ds-row-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;font-size:.78rem;color:var(--muted,#94b49d);overflow-wrap:anywhere}.ds-row-open{display:flex;align-items:center;justify-content:flex-end;min-height:44px;font-size:.95rem}.ds-row-open svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-left:.4rem}@media(max-width:1000px){.ds-row{grid-template-columns:1fr 100px;gap:1.4rem}}@media(max-width:680px){.ds-row{grid-template-columns:1fr 80px;gap:14px;padding-block:25px}.ds-row-title{font-size:1.45rem;line-height:1.25}.ds-row-description{font-size:.88rem}.ds-row-open{font-size:.78rem;align-self:start}.ds-row-open svg{width:16px;height:16px;margin-left:0}}",
+      "refersTo": "catalog-row"
+    },
+    {
+      "name": "Source Disclosure",
+      "kind": "custom",
+      "description": "Native details reveal the complete instruction.",
+      "html": "<details class=\"ds-source\"><summary>Full instruction <span>SKILL.md</span></summary><p class=\"ds-source-prose\">The original instruction is shown here.</p></details>",
+      "css": ".ds-source{font-family:var(--mono,\"Courier New\",Courier,monospace);border-top:1px solid var(--line,#274930);border-bottom:1px solid var(--line,#274930);padding-block:24px;margin-top:48px}.ds-source>summary{cursor:pointer;color:var(--green,#00ff41);font-size:1.1rem;min-height:44px;padding-block:8px}.ds-source>summary span{font-size:.75rem;color:var(--muted,#94b49d);margin-left:.6rem}.ds-source>summary:focus-visible{outline:2px solid var(--green,#00ff41);outline-offset:5px;}.ds-source[open]>summary{margin-bottom:24px}.ds-source-prose{color:var(--ink,#d3e5d7);font-size:.95rem;line-height:1.75;max-width:72ch}@media(max-width:680px){.ds-source>summary{font-size:1rem}.ds-source>summary span{display:block;margin:8px 0 0}}"
+    },
+    {
+      "name": "Copy Status",
+      "kind": "custom",
+      "description": "Visual success and failure states; the site announces them for eight seconds.",
+      "html": "<div class=\"ds-status\" role=\"status\">Copied. Paste the text into your chat.</div><div class=\"ds-status ds-status-error\" role=\"status\">Automatic copy failed. Copy the selected text manually.</div>",
+      "css": ".ds-status{font-family:var(--mono,\"Courier New\",Courier,monospace);max-width:calc(100% - 32px);padding:14px 20px;background:var(--green,#00ff41);color:#001807;font-size:.85rem;line-height:1.6;margin-block:14px}.ds-status-error{background:var(--ink,#d3e5d7)}@media(max-width:680px){.ds-status{font-size:.8rem;line-height:1.4}}",
+      "refersTo": "copy-status"
+    },
+    {
+      "name": "Code Panel",
+      "kind": "custom",
+      "description": "Wrapped source code in a flat bordered reading panel.",
+      "html": "<pre class=\"ds-code\"><code>Use the original skill and its supporting files.</code></pre>",
+      "css": ".ds-code{font-family:var(--mono,\"Courier New\",Courier,monospace);background:var(--panel,#071009);color:var(--ink,#d3e5d7);border:1px solid var(--line,#274930);padding:20px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.86rem;line-height:1.75}.ds-code code{font-family:inherit}@media(max-width:680px){.ds-code{padding:14px;font-size:.78rem}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The itops.dev Terminal",
+    "overview": "The site extends the existing itops.dev terminal identity into a public skill directory. Black is the continuous canvas; vivid green identifies headings, links, primary actions, and the small cursor. Courier New gives navigation, controls, and long instructions one consistent voice.\n\nThe presentation is flat and text-led. Quiet green-tinted text and thin dividers support dense reading; the bright accent marks useful actions. The system uses the homepage identity specified in PRODUCT.md and the implementation in web/style.css, web/app.js, and src/render.mjs. This document records that implementation, not a new brand direction.",
+    "keyCharacteristics": [
+      "One monospaced family throughout.",
+      "Black canvas with terminal-green action and heading accents.",
+      "Square controls, thin dividers, and open directory rows.",
+      "Responsive reading columns and explicit source metadata.",
+      "One cursor animation, with a reduced-motion alternative."
+    ],
+    "rules": [
+      {
+        "name": "The Terminal Accent Rule",
+        "body": "Use terminal green for headings, links, actions, selection, and keyboard focus. Use the quieter ink and muted colors for sustained reading and supporting metadata.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Voice Rule",
+        "body": "Keep the Courier New stack across headings, body text, controls, and code. Distinguish hierarchy through size, weight, spacing, and color.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Reading Rule",
+        "body": "Separate content with spacing, thin lines, and green-tinted surfaces. Keep the faint catalog-heading glow out of long-form reading and controls.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the inherited black, green, Courier, square-control, and cursor identity.",
+      "Do keep titles and descriptions ahead of technical metadata in directory rows.",
+      "Do use visible keyboard focus, readable text contrast, and the existing reduced-motion treatment.",
+      "Do keep source instructions readable and provide the manual-copy fallback when clipboard access fails.",
+      "Do preserve the mobile stacking, full-width primary actions, and wrapping of long source identifiers."
+    ],
+    "donts": [
+      "Don't introduce rounded cards, gradients, or raised box shadows into this flat terminal system.",
+      "Don't extend the heading glow to paragraphs, metadata, or controls.",
+      "Don't add more animated decoration around the single cursor motif.",
+      "Don't treat the sidecar's illustrative tonal ramps as extra production colors."
+    ]
+  }
+}
