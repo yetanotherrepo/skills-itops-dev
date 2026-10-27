@@ -33,10 +33,17 @@ export function parseSkill(text) {
   return { name: metadata.name, description: metadata.description.trim(), title: (heading || metadata.name).slice(0,160), body };
 }
 
+export function isPublishedSkill(config, repository, skillPath) {
+  const selection = config.publishedSkills;
+  const paths = selection && Object.hasOwn(selection, repository) ? selection[repository] : [];
+  return Array.isArray(paths) && (skillPath === undefined ? paths.length > 0 : paths.includes(skillPath));
+}
+
 export function eligibleRepositories(repos, config) {
   return repos.filter(repo => repo.private === false && repo.visibility !== 'private'
     && repo.owner?.login?.toLowerCase() === config.owner.toLowerCase()
     && (config.includeForks || repo.fork === false)
+    && isPublishedSkill(config, repo.name)
     && SEGMENT.test(repo.name) && typeof repo.default_branch === 'string');
 }
 
@@ -150,12 +157,13 @@ export class GitHubClient {
 
 export async function readRepository(repo, config, client, budget = { skills: 0, bytes: 0 }) {
   const owner = config.owner;
+  const selectedNodes = tree => skillNodes(tree, config).filter(node => isPublishedSkill(config, repo.name, node.path));
   let tree = await client.tree(owner, repo.name, repo.default_branch);
-  if (!skillNodes(tree.tree, config).length) return [];
+  if (!selectedNodes(tree.tree).length) return [];
   const commit = await client.json(`/repos/${owner}/${repo.name}/commits/${encodeURIComponent(repo.default_branch)}`);
   if (!/^[a-f0-9]{40}$/.test(commit.sha) || !/^[a-f0-9]{40}$/.test(commit.commit?.tree?.sha)) throw new Error('Invalid commit response');
   if (commit.commit.tree.sha !== tree.sha) tree = await client.tree(owner, repo.name, commit.commit.tree.sha);
-  const nodes = skillNodes(tree.tree, config);
+  const nodes = selectedNodes(tree.tree);
   if (budget.skills + nodes.length > config.maxSkills) throw new Error('Catalog exceeds the configured skill limit');
   const bundles = nodes.map(node => ({ node, entries: bundleNodes(tree.tree, node.path, config) }));
   const bytesRequired = bundles.reduce((total, bundle) => total + bundle.entries.reduce((sum, entry) => sum + entry.size, 0), 0);
@@ -202,6 +210,7 @@ export async function collect(config, previous = {}, client = new GitHubClient()
   const budget = { skills: 0, bytes: 0 };
   const reuse = (repo, old) => {
     if (!old) return;
+    old = { ...old, skills: old.skills.filter(skill => isPublishedSkill(config, repo.name, skill.path)) };
     const bytes = old.skills.reduce((sum, skill) => sum + Object.values(skill.files).reduce((n, value) => n + Buffer.byteLength(value, 'base64'), 0), 0);
     if (budget.skills + old.skills.length > config.maxSkills || budget.bytes + bytes > config.maxCatalogBytes) {
       next.warnings.push({ repo: repo.name, message: 'Cached source exceeds catalog limits' });

@@ -9,7 +9,8 @@ import { markdownHtml,renderSkill } from '../src/render.mjs';
 import { build } from '../src/build.mjs';
 import { synchronize } from '../src/sync.mjs';
 
-const config=JSON.parse(await readFile(new URL('../catalog.config.json',import.meta.url)));
+const productionConfig=JSON.parse(await readFile(new URL('../catalog.config.json',import.meta.url)));
+const config={...productionConfig,publishedSkills:{example:['SKILL.md','a/SKILL.md','b/SKILL.md','c/SKILL.md'],fork:['SKILL.md'],other:['SKILL.md'],new:['SKILL.md']}};
 const raw='---\nname: example\ndescription: A useful example\n---\n# Example\n\nOriginal content.\n';
 const commit='a'.repeat(40), treeSha='b'.repeat(40);
 const repo=name=>({name,private:false,visibility:'public',fork:false,owner:{login:config.owner},default_branch:'main',pushed_at:'2026-10-27T00:00:00Z'});
@@ -114,4 +115,20 @@ test('chat handoff retains the exact skill text for any skill type',()=>{
   const html=renderSkill(skill,snapshot,config);
   const value=html.match(/id="chat-prompt"[^>]*>([\s\S]*?)<\/textarea>/)[1];
   assert.equal(value,raw);
+});
+
+test('explicit selection excludes other repositories and nested skills, including cached fallback',async()=>{
+  const selected={...config,publishedSkills:{example:['SKILL.md']}};
+  const client={...fake([node('SKILL.md'),node('extra/SKILL.md')]),repositories:async()=>[repo('example'),repo('other'),{...repo('fork'),fork:true}]};
+  const first=await collect(selected,{},client);
+  assert.deepEqual(Object.keys(first.repositories),['example']);
+  assert.deepEqual(first.skills.map(s=>s.path),['SKILL.md']);
+  assert.deepEqual(Object.keys(first.skills[0].files),['SKILL.md']);
+  first.repositories.example.skills.push({...skill,id:'unselected',path:'extra/SKILL.md'});
+  first.scanConfig='previous-broader-selection';
+  client.tree=async()=>{throw Object.assign(new Error('Temporary source error'),{status:503});};
+  const fallback=await collect(selected,first,client);
+  assert.deepEqual(fallback.skills.map(s=>s.path),['SKILL.md']);
+  assert.equal(eligibleRepositories([repo('example')],{...selected,publishedSkills:undefined}).length,0);
+  assert.deepEqual(eligibleRepositories([repo('future-letter'),repo('other')],productionConfig).map(r=>r.name),['future-letter']);
 });

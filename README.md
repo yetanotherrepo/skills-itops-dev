@@ -1,15 +1,16 @@
 # skills.itops.dev
 
-A public, automatically refreshed mirror of AI skills published by [yetanotherrepo](https://github.com/yetanotherrepo), including public forks. Visit **[skills.itops.dev](https://skills.itops.dev)** to browse, search, copy installation instructions, or download a skill.
+A public, automatically refreshed mirror of explicitly selected AI skills published by [yetanotherrepo](https://github.com/yetanotherrepo). The current selection contains only `future-letter`. Visit **[skills.itops.dev](https://skills.itops.dev)** to browse, search, copy installation instructions, or download a skill.
 
 The visitor interface is in Russian and follows the black, green, monospace identity of [itops.dev](https://itops.dev). GitHub remains the source of truth. The mirror never uploads local skills or executes instructions from a repository.
 
 ## Publish a skill
 
-1. Publish the skill in a public repository under `yetanotherrepo`. Put `SKILL.md` at the repository root or in a dedicated skill directory. Public forks are included.
+1. Publish the skill in a public repository under `yetanotherrepo`. Put `SKILL.md` at the repository root or in a dedicated skill directory. A public repository or fork is eligible only when its exact skill path is selected in the mirror configuration.
 2. Give `SKILL.md` YAML frontmatter containing `name` (lowercase letters, digits, hyphens) and `description` (non-empty text). Keep supporting files in that skill directory. A nearby `README.md` becomes the human-readable guide; `agents/openai.yaml` may supply the display name and short description.
-3. Push to the repository's default branch. The mirror checks GitHub every five minutes. During GitHub rate limits or outages, publication may take longer.
-4. Open the catalog, find the skill, and compare its displayed commit with GitHub. Do not call publication complete until both locations are verified.
+3. For an explicitly approved publication, add its repository name and exact `SKILL.md` path to `publishedSkills` in `catalog.config.json`, then deploy that configuration. Currently only `future-letter: ["SKILL.md"]` is selected.
+4. Push to the repository's default branch. The mirror checks GitHub every five minutes. During GitHub rate limits or outages, publication may take longer.
+5. Open the catalog, find the skill, and compare its displayed commit with GitHub. Do not call publication complete until both locations are verified.
 
 Publishing one skill does not authorize publishing other local or private skills. A skill inside a larger repository can depend on files or tools outside its directory; the site explains this, and links to its source. Forks are labelled without claiming that the account owner wrote them.
 
@@ -31,7 +32,7 @@ No GitHub token is required or read. All requests use anonymous public endpoints
 
 ## Configuration and troubleshooting
 
-`catalog.config.json` controls discovery and limits. Runtime environment variables are optional for local use:
+`catalog.config.json` controls the explicit `publishedSkills` selection, discovery and limits. Missing or empty selection publishes no skills; unselected public repositories and paths are excluded, including cached fallback content. Runtime environment variables are optional for local use:
 
 - `STATE_DIR`: working cache and backoff state (default `.cache`).
 - `PUBLISH_DIR`: releases and active symlink (default `dist-published`).
@@ -39,7 +40,7 @@ No GitHub token is required or read. All requests use anonymous public endpoints
 - `PREVIEW_DIR`: directory served by the preview (default `dist`).
 - `PORT`: localhost preview port (default: an available ephemeral port).
 
-If a new skill is missing, check that its repository is public, its default branch contains a valid `SKILL.md`, and the file is outside generated/ignored directories. Standard nested directories such as `.github/skills/` are supported. A configuration change invalidates scan caches on the next run.
+If a new skill is missing, check that its exact repository/path pair is selected in `publishedSkills`, its repository is public, its default branch contains a valid `SKILL.md`, and the file is outside generated/ignored directories. Standard nested directories such as `.github/skills/` are supported. A configuration change invalidates scan caches on the next run.
 
 If the catalog is stale, inspect the service journal and backoff state. GitHub outages or rate limits keep the last published site available. Fix the reported source or wait for the retry window, then start the service again. Do not delete working state or disable TLS validation to bypass an error.
 

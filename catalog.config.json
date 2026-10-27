@@ -2,6 +2,9 @@
   "owner": "yetanotherrepo",
   "siteUrl": "https://skills.itops.dev",
   "includeForks": true,
+  "publishedSkills": {
+    "future-letter": ["SKILL.md"]
+  },
   "refreshMinutes": 5,
   "maxFileBytes": 1048576,
   "maxBundleBytes": 8388608,

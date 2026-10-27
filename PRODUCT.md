@@ -20,11 +20,11 @@ Mirror the owner's GitHub-published public skills automatically at skills.itops.
 
 ## Operating Context
 
-The owner publishes public skills to `yetanotherrepo` on GitHub. The initial verified publication is `future-letter`. The website must pick up new publications and updates. Local installed skills are not all approved for publication.
+The owner publishes public skills to `yetanotherrepo` on GitHub. The initial verified publication is `future-letter`. The website must refresh explicitly selected skills. On 2026-10-27 the user narrowed the visible catalog to the letter skill, whose existing source name is `future-letter`; automatic inclusion of other public repositories was withdrawn. Local installed skills are not all approved for publication.
 
 ## Capabilities and Constraints
 
-Public-only source discovery, catalog, individual skill pages, original instruction text, downloadable packages, and source attribution. No execution of skill content during mirroring. User-confirmed scope: include owned public repositories and public forks. Static publication is isolated from the existing homepage.
+Public-only source discovery, catalog, individual skill pages, original instruction text, downloadable packages, and source attribution. No execution of skill content during mirroring. Current user scope: only `future-letter/SKILL.md`. Public repositories and forks require explicit selection before mirroring. Static publication is isolated from the existing homepage.
 
 ## Brand Commitments
 

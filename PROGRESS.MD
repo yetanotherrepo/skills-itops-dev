@@ -4,7 +4,7 @@
 Build and deploy skills.itops.dev as an automatic mirror of the owner's public GitHub skills, with the visual identity of itops.dev. Phase: delivered.
 
 ## Current status
-2026-10-27, Europe/Lisbon. Live at [skills.itops.dev](https://skills.itops.dev): 15 skills from public sources, including forks. The scanner checks 13 public repositories (including this site's new repository). Nine tests pass. Automatic propagation of a real GitHub commit was verified through the systemd timer. Site source is public at [yetanotherrepo/skills-itops-dev](https://github.com/yetanotherrepo/skills-itops-dev); design documentation is complete.
+2026-10-27, Europe/Lisbon. User requested removing all skills except the letter skill (existing source name `future-letter`). Deployed the explicit selection: only `future-letter/SKILL.md` remains live. Ten tests pass; all 42 old page/archive/source URLs for the 14 removed skills return 404. The retained skill page, archive and original source return 200.
 
 ## Completed
 - Confirmed the GitHub owner: `yetanotherrepo`; `future-letter` is publicly available.
@@ -20,7 +20,7 @@ Build and deploy skills.itops.dev as an automatic mirror of the owner's public G
 - No active implementation task remains.
 
 ## Next steps
-- Publish future approved skills to GitHub; verify their mirror after the scheduled check.
+- For future approved publications, add the exact source to `publishedSkills` and verify its mirror.
 - Investigate only actionable service warnings or requested product changes.
 
 ## Blocked and open questions
@@ -55,3 +55,7 @@ Build and deploy skills.itops.dev as an automatic mirror of the owner's public G
 - 2026-10-27: HTTPS deployment and automatic timer propagation verified; both independent reviews completed, no open material fixes.
 
 - 2026-10-27: source repository published publicly (initial commit `cced753`); design documenter completed and validated tokens. Final future-letter commit `f92bc08` was also confirmed on the mirror after its progress-record update.
+
+- 2026-10-27: latest user request supersedes broad discovery. Added exact source selection, filtered cached fallbacks, and confirmed a one-skill local build; no GitHub source repository deletion is part of this change.
+
+- 2026-10-27: production refresh completed at 14:02 UTC with one skill and no warnings. Verified catalog/sitemap pruning, 42 removed URLs returning 404, retained source returning 200, and security review with no findings. Updated the durable publication rule to require exact selection.
