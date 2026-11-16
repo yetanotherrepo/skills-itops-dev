@@ -3,7 +3,8 @@
   "siteUrl": "https://skills.itops.dev",
   "includeForks": true,
   "publishedSkills": {
-    "future-letter": ["SKILL.md"]
+    "future-letter": ["SKILL.md"],
+    "simplified-technical-russian": ["SKILL.md"]
   },
   "refreshMinutes": 5,
   "maxFileBytes": 1048576,

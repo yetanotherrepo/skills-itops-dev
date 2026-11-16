@@ -1,6 +1,6 @@
 # skills.itops.dev
 
-A public, automatically refreshed mirror of explicitly selected AI skills published by [yetanotherrepo](https://github.com/yetanotherrepo). The current selection contains only `future-letter`. Visit **[skills.itops.dev](https://skills.itops.dev)** to browse, search, copy installation instructions, or download a skill.
+A public, automatically refreshed mirror of explicitly selected AI skills published by [yetanotherrepo](https://github.com/yetanotherrepo). The current selection contains `future-letter` and `simplified-technical-russian`. Visit **[skills.itops.dev](https://skills.itops.dev)** to browse, search, copy installation instructions, or download a skill.
 
 The visitor interface is in Russian and follows the black, green, monospace identity of [itops.dev](https://itops.dev). GitHub remains the source of truth. The mirror never uploads local skills or executes instructions from a repository.
 
@@ -8,7 +8,7 @@ The visitor interface is in Russian and follows the black, green, monospace iden
 
 1. Publish the skill in a public repository under `yetanotherrepo`. Put `SKILL.md` at the repository root or in a dedicated skill directory. A public repository or fork is eligible only when its exact skill path is selected in the mirror configuration.
 2. Give `SKILL.md` YAML frontmatter containing `name` (lowercase letters, digits, hyphens) and `description` (non-empty text). Keep supporting files in that skill directory. A nearby `README.md` becomes the human-readable guide; `agents/openai.yaml` may supply the display name and short description.
-3. For an explicitly approved publication, add its repository name and exact `SKILL.md` path to `publishedSkills` in `catalog.config.json`, then deploy that configuration. Currently only `future-letter: ["SKILL.md"]` is selected.
+3. For an explicitly approved publication, add its repository name and exact `SKILL.md` path to `publishedSkills` in `catalog.config.json`, then deploy that configuration. The current selection contains `future-letter: ["SKILL.md"]` and `simplified-technical-russian: ["SKILL.md"]`.
 4. Push to the repository's default branch. The mirror checks GitHub every five minutes. During GitHub rate limits or outages, publication may take longer.
 5. Open the catalog, find the skill, and compare its displayed commit with GitHub. Do not call publication complete until both locations are verified.
 
